@@ -20,21 +20,9 @@ app.service('dataService', function() {
 			quotes.push({text: quote, author: auth});
 		};
 	};
-	this.removeData = function(quoteText) {
-		var index = quotes.indexOf(quoteText);
-		for (key in quotes) {
-			if (index !== -1) {
-				quotes.splice(index, 1);
-			};	
-		};
+	this.removeData = function(index) {
+		quotes.splice(index, 1);
 	};
-
-
-
-
-
-
-
 
 });
 
